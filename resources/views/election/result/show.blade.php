@@ -38,6 +38,15 @@
                                                         </td>
                                                         <td>{{ $candidate->votes }}</td>
                                                     </tr>
+                                                @elseif($loop->count === $position->vote_limit)
+                                                <tr>
+                                                    <td>{{ $position->name }}</td>
+                                                    <td>
+                                                        {{ $candidate->user->lastname }}
+                                                        , {{ $candidate->user->firstname }}
+                                                    </td>
+                                                    <td>{{ $candidate->votes }}</td>
+                                                </tr>
                                                 @endif
                                             @endforeach
                                         @endforeach

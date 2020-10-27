@@ -17,6 +17,11 @@
   <component name="ChangeListManager">
     <list default="true" id="794144a8-f317-40cd-8e49-56b92ddc0ba3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_26_094102_remove_election_id_from_votes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_002208_add_batch_to_votes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_003358_drop_votes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_27_003609_drop_positions_votes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/election/result/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/election/result/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,6 +267,8 @@
       <workItem from="1603690243921" duration="17291000" />
       <workItem from="1603757157997" duration="22113000" />
       <workItem from="1603785571592" duration="823000" />
+      <workItem from="1603804190542" duration="1409000" />
+      <workItem from="1603812123148" duration="1244000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1603779009899</created>
