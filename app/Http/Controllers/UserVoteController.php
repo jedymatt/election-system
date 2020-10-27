@@ -61,17 +61,33 @@ class UserVoteController extends Controller
         if ($election->status === 'close') {
             return redirect(route('election.show', $election->id));
         }
+        // dd($request);
         foreach ($request->except(['_token']) as $candidate_id) {
-            $vote = UserVote::create([
-                'candidate_id' => $candidate_id,
-                'user_id' => Auth::user()->id,
-            ]);
+            
+            
+            if (is_array($candidate_id)) {
+                foreach ($candidate_id as  $value) {
+                    $vote = UserVote::create([
+                        'candidate_id' => $value,
+                        'user_id' => Auth::user()->id,
+                    ]);
 
-            $candidate = Candidate::findOrFail($candidate_id);
-            $num_votes = $candidate->votes;
-            $candidate->votes = ++$num_votes;
-            $candidate->update();
+                    $candidate = Candidate::findOrFail($value);
+                    $num_votes = $candidate->votes;
+                    $candidate->votes = ++$num_votes;
+                    $candidate->update();
+                }
+            } else {
+                $vote = UserVote::create([
+                    'candidate_id' => $candidate_id,
+                    'user_id' => Auth::user()->id,
+                ]);
 
+                $candidate = Candidate::findOrFail($candidate_id);
+                $num_votes = $candidate->votes;
+                $candidate->votes = ++$num_votes;
+                $candidate->update();
+            }
         }
 
         VoteCount::create([

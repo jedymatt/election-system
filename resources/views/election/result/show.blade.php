@@ -64,7 +64,7 @@
                                                             <div class="progress-bar bg-info" role="progressbar"
                                                                  aria-valuenow="75" aria-valuemin="0"
                                                                  aria-valuemax="100"
-                                                                 style="width: {{ ($candidate->votes * 100.0) / $position->totalVotes($election) }}%">{{ $candidate->votes }}</div>
+                                                                 style="width: {{ $position->totalVotes($election) === 0 ? 0:($candidate->votes * 100.0) / $position->totalVotes($election) }}%">{{ $candidate->votes }}</div>
                                                         </div>
                                                         <label
                                                             class="d-flex justify-content-between align-content-center">

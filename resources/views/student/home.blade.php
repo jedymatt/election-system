@@ -64,7 +64,7 @@
                                                                    role="button">
                                                                     Vote
                                                                 </a>
-                                                            @elseif(count($user->vote_counts->where('election_id', $election->id)) >= $election->vote_limit)
+                                                            @elseif(count($user->vote_counts->where('election_id', $election->id)) >= $election->vote_limit  && $election->status === 'open')
                                                                 <span class="text-muted font-italic">Used all remaining votes</span>
                                                             @elseif($election->status === 'close')
                                                                 <span class="text-muted font-italic">Voting ended</span>

@@ -43,7 +43,7 @@
                                                     @foreach($candidates->where('position_id', $position->id) as $candidate)
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox"
-                                                                   name="{{ strtolower($position->name) }}"
+                                                                   name="{{ strtolower($position->name) }}[]"
                                                                    id="candidate{{ $candidate->id }}"
                                                                    value="{{ $candidate->id }}">
                                                             <label class="form-check-label"
